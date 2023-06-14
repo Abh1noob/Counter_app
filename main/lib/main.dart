@@ -63,16 +63,25 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.headlineMedium,
             ),
             const SizedBox(height:10),
-            
-            ElevatedButton(
-              onPressed: _incrementCounter,
-              child: const Icon(Icons.add),
+
+            Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  ElevatedButton(
+                    onPressed: _incrementCounter,
+                    child: const Icon(Icons.add),
+                  ),
+                  const SizedBox(width:20),
+                  
+                  ElevatedButton(
+                  onPressed: reset,
+                  child: const Text('Reset')),
+                ]
             ),
-            const SizedBox(height:10),
-            
-            ElevatedButton(
-            onPressed: reset,
-            child: const Text('Reset')),
+            ),
+
           ],
         ),
       ),
